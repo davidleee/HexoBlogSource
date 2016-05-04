@@ -120,6 +120,9 @@ P.S. 这里说到的 *Java 端* 应该是指服务器端，Android 端上不知�
 
 > 有趣的是，如果采用 PKCS5 去填充，因为它的目标块大小是8，所以这里会填充一个01。详情可以参考[Can AES use PKCS#5 padding](http://crypto.stackexchange.com/a/11274)里的最佳答案。
 
+## 写在最后
+从上面的流程可以看出，一个逻辑严密的加密算法其实就是由一个个结构精巧的小算法构成的。在我看来，不深入到每个算法的内部，而只是看看它们之间的联系，还是蛮有意思的。研究算法的事情还是交给专业的人去做吧~
+
 ## 参考资料
 * [Advanced Encryption Standard](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
 * [Rijndael 密钥生成方案](https://en.wikipedia.org/wiki/Rijndael_key_schedule)

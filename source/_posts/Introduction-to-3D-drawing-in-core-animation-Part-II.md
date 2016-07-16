@@ -221,5 +221,4 @@ DONE！
 这只是个使用纯 Core Animation 构建三维视图的简单例子，项目中真实的需求可能要复杂得多，但是 Core Animation 的强大也不止于此。
 现在你可以尽情去实验代码里玩耍了！
 
-再一次附上原文：
-[原文在此](www.thinkandbuild.it/introduction-to-3d-drawing-in-core-animation-part-2)。
+再一次附上原文：[Introduction to 3D drawing in core animation (Part 2)](http://www.thinkandbuild.it/introduction-to-3d-drawing-in-core-animation-part-2)

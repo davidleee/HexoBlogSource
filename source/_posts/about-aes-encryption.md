@@ -107,15 +107,15 @@ AES加密算法的组成可以分成4个主要部分：
 
 ## 填充算法
 对于块加密算法来说，如果数据的长度不满一个块的大小，我们就需要主动填充一些数据，让这个块的大小可以满足要求，于是，一个合适的填充算法就显得尤为重要。
-经过导师的提醒并且在网上读了一些博客之后发现，[Java端与iOS端使用的AES填充算法是不一样的](http://my.oschina.net/nicsun/blog/95632)，在 Java 端上使用的是 PKCS5Padding ，而在iOS端上使用的是 PKCS7Padding 。所以就会导致在其中一端上加解密没有问题，但是把密文发到另一端上解密就会得到完全不同的结果。
-P.S. 这里说到的 *Java 端* 应该是指服务器端，Android 端上不知道有没有这个问题。
+经过导师的提醒并且在网上读了一些博客之后发现，[Java 端与 iOS 端使用的 AES 填充算法是不一样的](http://my.oschina.net/nicsun/blog/95632)，在 Java 端上使用的是 PKCS5Padding ，而在iOS端上使用的是 PKCS7Padding 。所以就会导致在其中一端上加解密没有问题，但是把密文发到另一端上解密就会得到完全不同的结果。
+P.S. 这里说到的 *Java 端* 应该是指服务器端，*Android SDK* 上不知道还有没有这个问题。
 
 > PKCS5 相当于是 PKCS7 的一个子集，因为 PKCS7 理论上支持1~255字节的块大小填充，而 PKCS5 只支持8字节的块大小填充。其实 PKCS5 更多是应用在 DES/3DES 上。
 
 具体的填充过程也非常好理解，直接举例子好了：比如说块大小为8字节的加密算法，现在有一串长度为9的数据：
-`FF FF FF FF FF FF FF FF FF`（9个FF）
+`FF FF FF FF FF FF FF FF FF`（9个 FF）
 使用 PKCS7 算法去填充的话，结果就是这样的
-`FF FF FF FF FF FF FF FF FF 07 07 07 07 07 07 07`（9个FF和7个07）
+`FF FF FF FF FF FF FF FF FF 07 07 07 07 07 07 07`（9个 FF 和7个07）
 填充的目的就是把块给补满，所以这里填充的长度为7；而采用 PKCS7 算法的话，填充的每一个字节都是填充长度的十六进制数，那就也是7。
 
 > 有趣的是，如果采用 PKCS5 去填充，因为它的目标块大小是8，所以这里会填充一个01。详情可以参考[Can AES use PKCS#5 padding](http://crypto.stackexchange.com/a/11274)里的最佳答案。

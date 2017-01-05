@@ -6,7 +6,7 @@
 favicon: /favicon.jpg
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "davidlee, david, lee, iOS, Android, Developer, mobile"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -240,7 +240,7 @@ leancloud_visitors:
 # tencent_analytics:
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS

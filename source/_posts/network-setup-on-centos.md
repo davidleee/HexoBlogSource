@@ -25,7 +25,7 @@ tags:
 > 刚安装好的 CentOS 7.2 系统是不带 `ifconfig` 这类网络工具的，而是被 `ip` 指令取代了
 
 下图是两种找到网卡配置文件的方式：
-{% img /uploads/network-setup-on-centos/p1.png 找到要配置的网卡 %}
+{% img center /uploads/network-setup-on-centos/p1.png 找到要配置的网卡 %}
 
 ### 1. 直接在网络脚本目录中找
 ```
@@ -48,7 +48,7 @@ ip addr show
 vi /etc/sysconfig/network-scripts/ifcfg-enp2s0
 ```
 可以看到该网卡的配置类似下图，主要关注红框的部分：
-{% img /uploads/network-setup-on-centos/p2.png 网卡配置文件 %}
+{% img center /uploads/network-setup-on-centos/p2.png 网卡配置文件 %}
 
 如果发现文件中没有这两个字段，可以手动给它加上，`ONBOOT` 配置为 `yes` 让网卡可以开机自启动，`BOOTPROTO` 是配置获取 IP 的方式，需要根据具体的网络环境来设定，主要分为两种情况：
 
@@ -66,7 +66,7 @@ GATEWAY=192.168.1.1
 NETMASK=255.255.255.0
 ```
 完成之后应该是像下图这样，红框部分是经过修改的地方：
-{% img /uploads/network-setup-on-centos/p3.png 修改后的网卡配置文件 %}
+{% img center /uploads/network-setup-on-centos/p3.png 修改后的网卡配置文件 %}
 
 
 ## 重启网络
@@ -76,7 +76,7 @@ service network restart
 ```
 
 网卡重启后，可以通过 `ip addr show` 查看配置生效了没有：
-{% img /uploads/network-setup-on-centos/p4.png 400 400 查看 IP 地址 %}
+{% img center /uploads/network-setup-on-centos/p4.png 400 400 查看 IP 地址 %}
 
 红框部分应该是刚才配置的 `IPADDR` 中的内容，或者是路由器上分配过来的 IP 地址。
 

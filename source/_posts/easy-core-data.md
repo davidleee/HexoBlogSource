@@ -13,10 +13,10 @@ tags:
 
 ## Launch our Xcode!
 不管怎么样，先把咱熟悉的 Xcode 召唤起来，创建一个新项目。本项目的完整代码可以在[这里](https://github.com/davidleee/CoreDataTryout)找到。对了，创建项目的时候记得把下面这个小勾给勾上，让 Xcode 帮我们创建模型文件。
-![use_core_data](/uploads/easy-core-data/use_core_data.png)￼
+{% img center /uploads/easy-core-data/use_core_data.png 创建项目 %}
 
 然后就可以看到项目中出现一个后缀为 xcdatamodeld 的文件，这个文件相当于 Core Data 的 storyboard （不知道 [storyboard](https://developer.apple.com/videos/wwdc/2012/?id=407)？）。选中它，你会看到这样几个东西：
-![model_document](/uploads/easy-core-data/model_document.png)￼
+{% img center /uploads/easy-core-data/model_document.png xcdatamodeld %}
 
 在这篇文章里，我们就只关注 Entities 部分。
 
@@ -40,14 +40,14 @@ tags:
 在 App 里面创建出来的数据对象和实际保存着的数据之间，存在着一个持久栈( Persistence Stack )。这个栈的最顶层是 `NSManagedObjectContext`，而它的最底层则是一个个数据文件( Persistent Object Store )，在它们之间的就是 `NSPersistentStoreCoordinator`。我们因为 `NSManagedObjectContext`的存在，而不需要直接操作这些数据文件；而且 Persistent Store Coordinator 的存在，是基于外观模式的设计，这就使得 `NSManagedObjectContext` 不需要面对多个数据文件，只和 Coordinator 打交道就可以了。
 
 整个持久栈看起来就是这个样子：
-￼{% img [persistence_stack] /uploads/easy-core-data/persistence_stack.png  Persistence Stack %}
+￼{% img center /uploads/easy-core-data/persistence_stack.png  Persistence Stack %}
 
 好，铺垫了那么久，也该用实践来检验一下真理了。
 
 ## 准备工作
 什么？上面讲了那么久的三个东西，Xcode 已经帮我们在 AppDelegate 里都准备好了？
 嗯，没错，很贴心嘛。
-￼{% img [r_u_kidding] /uploads/easy-core-data/r_u_kidding.png  250 250 %}
+￼{% img center /uploads/easy-core-data/r_u_kidding.png  250 250 %}
 
 不过我们还是来简单理一理这些代码里面的关系吧。
 
@@ -88,18 +88,17 @@ Core Data 里面的数据都是自动保存的，也就是说，你完全可以�
 一切准备就绪，我们终于要真正开始操作我们的数据库了！
 
 先在我们的 xcdatamodeld 文件里面添加一个 Entity ，随便起个名字叫 User 好了，然后在右边 Attributes 那一栏里面添加一些属性。
-![attributes](/uploads/easy-core-data/attributes.png)￼
-
+{% img center /uploads/easy-core-data/attributes.png Attributes %}
 
 Attributes 都是强类型的，所以如果你不手动给它们指定类型，编译器就会直接报错。能够写入数据库的类型还是挺丰富的，值得一提的是，数字和布尔值最终都会被转换成 `NSNumber` 来处理，而图片这一类比较大的文件就必须转换成 `NSData` 再写入了。
 
 接下来，让 Xcode 帮我们生成这个实体的子类：
-![create_subclasses](/uploads/easy-core-data/create_subclasses.png)￼
+{% img center /uploads/easy-core-data/create_subclasses.png 创建子类 %}
 
 
 选择一下 Model 和想要子类化的 Entity （有的项目会使用多个 Model，我们这里就只有一个）：
-![choose_mode](/uploads/easy-core-data/choose_model.png)￼
-![choose_entity](/uploads/easy-core-data/choose_entity.png)￼
+{% img center /uploads/easy-core-data/choose_model.png 选择 Model %}
+{% img center /uploads/easy-core-data/choose_entity.png 选择 Entity %}
 
 
 然后点 create ，你会发现项目文件夹中多两个文件 User.h/m。这两个文件由 Xcode 生成也由 Xcode 管理，所以如果我们改动了里面的内容，Xcode 可能就会跟我们发牢骚了。（如果确实需要添加某些功能，可以使用 category ）
@@ -107,11 +106,11 @@ Attributes 都是强类型的，所以如果你不手动给它们指定类型，
 如今这个类已经全权代表了我们在模型里面创建的实体，它的 property 和我们添加的 attributes 是一一对应的关系，也就是可以直接从这些属性访问到实体的变量了。
 
 多说无益，赶紧来动动手！
-{% img [accept_challenge] /uploads/easy-core-data/accept_challenge.png 250 250 %}
+{% img /uploads/easy-core-data/accept_challenge.png 250 250 %}
 
 ## Write the code, change the world!
 首先拉一个简陋的界面出来给我们的用户输入信息，下面放一个输出信息的地方，省的我们每次都跑到 Debug Area 里面看：
-{% img [main_v] /uploads/easy-core-data/main_vc.png Main VC %}
+{% img center /uploads/easy-core-data/main_vc.png 500 500 Main VC %}
 
 
 把所有控件都 hook 起来，然后在“写进去”和"读出来"两个按钮的 IBAction 里写代码。
@@ -161,14 +160,12 @@ Core Data 用起来还是挺直观的吧？
 认识一个新伙伴—— `NSFetchRequest`，数据库的读取基本都是靠这家伙了，你还可以对它加上各式各样的条件和约束，进行更精确的数据库查询。查询的结果会保存在一个 NSArray 里面，不管它，直接输出给我们看看。
 
 这就够了！让我们的程序跑起来吧！
-￼{% img [let_run] /uploads/easy-core-data/let_run.png  250 250 %}
+￼{% img /uploads/easy-core-data/let_run.png  250 250 %}
 
 ## 结果
 随便录入点数据，按下“写进去”，嗯，和预期的一样，什么反应也没有。
 然后按下"读出来"：
-<figure>
-{% img [result] /uploads/easy-core-data/result.png Result %}
-</figure>
+{% img center /uploads/easy-core-data/result.png 500 500 Result %}
 
 嗯？输出的结果看起来有点奇怪？
 那是因为我们直接把数组的 description 打印了出来。这个数组里面其实就是我们之前创建好的 User 对象，直接拿出来当Model用就可以了。

@@ -2,6 +2,8 @@
 title: Gesture Recognizers for iOS - The Basic
 date: 2017-03-28 08:51:28
 tags:
+- iOS
+- Gesture
 ---
 
 > Your app should respond to gestures only in ways that users expect.
@@ -73,7 +75,7 @@ swipe 和 pan 一起添加到 view 上的时候，pan 总是在 swipe 之前被�
 所以在 swipe 手势 fail 之前，pan 手势识别器会一直处于 Possible 的状态，直到 swipe 手势 fail；反之，如果swipe手势识别器状态变成了 Recognized 或 Began 的话，pan 手势识别器就会自动转变为 Failed 状态。
 
 > 如果一个地方同时识别单击和双击，会出现两种不那么友好的情况，最好可以在交互上规避：
-> 
+>
 > 1. 不使用 `requireGestureRecognizerToFail:` 方法：在收到双击通知之前，会收到一次单击的通知，需要在单击方法的处理上区分这些情况。
 > 2. 使用 `requireGestureRecognizerToFail:` 方法：单击方法会有一些延迟，因为它需要等到双击手势识别器确认为 Failed 状态之后才可以执行。
 
@@ -110,5 +112,6 @@ UIView 里面也有一个同样的 `gestureRecognizerShouldBegin:` 方法，方�
 这里其实只涵盖了非常有限的一些基础知识，后面如果有机会就把这个写成一个系列文章。
 
 参考资料：
-[Event Handling Guide for iOS](https://developer.apple.com/library/ios/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/GestureRecognizer_basics/GestureRecognizer_basics.html#//apple_ref/doc/uid/TP40009541-CH2-SW44)
+
+> 以前参考的是苹果官方的 **Event Handling Guide for iOS**，不过这篇文章已经从官网下架了，想了解更多信息的同学们可以看另外一篇 [Gesture Recognizer Basics](https://developer.apple.com/library/content/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/)
 

@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Lee的笔记本
+title: Lee 的笔记本
 subtitle:
-description: 什么都学一些的iOS程序员
+description: 快乐的程序猿
 author: Lee
 language: zh-Hans
 timezone: Asia/Shanghai
@@ -119,3 +119,5 @@ links:
   Android梦想特工队: http://www.wxtlife.com/
   Devhua's Blog: http://www.devhua.com/
   小熊糖否: http://www.freehacker.cn
+  Debbie Fu: https://debbiefu.github.io/
+  Hays' Blog: https://hays.github.io/

@@ -134,7 +134,7 @@ let x = Optional<String>.none
 
 let x: String? = "hello"
 // 等价于
-let x = Optional<String>.some("hello)
+let x = Optional<String>.some("hello")
 
 let y = x!
 // 等价于

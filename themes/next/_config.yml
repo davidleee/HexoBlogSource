@@ -302,7 +302,7 @@ baidu_analytics: 40d9ab0962d30fc4482f8b32cd8d8de1
 #hypercomments_id:
 
 # Gentie productKey
-gentie_productKey: 2ca9a647aaf24c8f8d6b0ff63d99da22
+# gentie_productKey: 2ca9a647aaf24c8f8d6b0ff63d99da22
 
 # changyan
 changyan:
@@ -312,7 +312,7 @@ changyan:
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
-#youyan_uid: your uid
+youyan_uid: 2139831
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)

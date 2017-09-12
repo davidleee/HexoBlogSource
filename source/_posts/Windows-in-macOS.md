@@ -1,5 +1,5 @@
 ---
-title: macOS 下的 Window 和 WindowController
+title: 20分钟手把手教你写 macOS 文本编辑器
 date: 2017-09-11 15:22:15
 tags:
 - macOS
@@ -239,7 +239,7 @@ Cocoa 自带了一些很神奇的 UI 和功能，就等着你把它们用起来�
 打开 **ViewController.swift**，把 `viewDidLoad` 附近的代码替换成下面这段：
 ```Swift
 @IBOutlet var text: NSTextView!
-  
+
 override func viewDidLoad() {
   super.viewDidLoad()
   text.toggleRuler(nil)
@@ -327,18 +327,18 @@ dynamic var paragraphCount = 0
 打开 **ViewController.swift**，添加一个按钮事件：
 ```Swift
 @IBAction func showWordCountWindow(_ sender: AnyObject) {
-  
+
   // 1
   let storyboard = NSStoryboard(name: "Main", bundle: nil)
   let wordCountWindowController = storyboard.instantiateController(withIdentifier: "Word Count Window Controller") as! NSWindowController
-  
+
   if let wordCountWindow = wordCountWindowController.window, let textStorage = text.textStorage {
-    
+
     // 2
     let wordCountViewController = wordCountWindow.contentViewController as! WordCountViewController
     wordCountViewController.wordCount = textStorage.words.count
     wordCountViewController.paragraphCount = textStorage.paragraphs.count
-    
+
     // 3
     let application = NSApplication.shared()
     application.runModal(for: wordCountWindow)

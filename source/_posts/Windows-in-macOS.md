@@ -92,7 +92,7 @@ override func save(withDelegate delegate: Any?, didSave didSaveSelector: Selecto
     }
 ```
 
-{% img center /uploads/Windows-in-macOS/no-saving-for-you.png No saving for you %}
+{% img center /uploads/Windows-in-macOS/no-saving-for-you.jpg No saving for you %}
 
 现在重新运行项目，你会发现菜单栏里我们刚才取消关联的选项已经无法选中了：
 

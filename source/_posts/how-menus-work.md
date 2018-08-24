@@ -4,9 +4,13 @@ date: 2018-08-22 17:44:37
 tags:
 - macOS
 - Swift
-- Menus
+- AppKit
+- NSMenus
+- NSPopover
+- NSPopupButton
 - Dock
-- StatusBar
+- NSDockTile
+- NSStatusBar
 ---
 
 > 这是 macOS 开发系列的第二篇文章——让人眼花缭乱的 macOS 菜单。

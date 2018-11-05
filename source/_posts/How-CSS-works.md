@@ -102,7 +102,7 @@ P
 
 现在来加一个 CSS 约束试试：
 
-```
+```css
 span {
   border: 1px solid black;
   background-color: lime;
@@ -121,7 +121,7 @@ emmm…还是跟刚刚一样的 DOM，不过这些 CSS 约束会被加到 `span`
 
 即直接通过 `<style>` 标签来定义元素的长相，这个 `<style>` 需要写在 `<head>` 标签下才会生效：
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>

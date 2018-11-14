@@ -1,7 +1,13 @@
 ---
-title: 又一篇 iOS Extension 入门（1/3） — 基础 & 分享扩展 
+title: 又一篇 iOS Extension 入门（1/3）— 基础 & 分享扩展 
 date: 2018-11-14 16:00:50
 tags:
+- ios
+- App Groups
+- Extension
+- Share
+- NSExtensionItem
+- NSItemProvider
 ---
 
 应用扩展（App Extension）让你应用的功能和内容都得到了更大的延伸，这让用户在使用其他应用的时候有机会与你的应用发生交互。在这个大家都极力争夺注意力的时代，应用扩展无疑为我们打开了一扇新的大门。
@@ -96,29 +102,29 @@ let items = self.extensionContext?.inputItems
 继续上面的例子，我们打算在用户点击 “Post” 按钮之后，获取从 Safari 分享过来的 URL，完整的代码是这样的：
 ```swift
 override func didSelectPost() {
-        // This is called after the user selects Post. Do the upload of contentText and/or NSExtensionContext attachments.
-		  // 1
-        guard let items = extensionContext?.inputItems as? [NSExtensionItem] else {
-            return
-        }
-		  // 2
-        for item in items {
-            for attachment in item.attachments ?? [] {
-				  // 3
-                if attachment.hasItemConformingToTypeIdentifier(kUTTypeURL as String) {
-					  // 4
-                    attachment.loadItem(forTypeIdentifier: kUTTypeURL as String, options: nil) { (item, error) in
-                        if error == nil {
-                            print("found an url: \(item)")
-                        }
-                    }
-                }
+    // This is called after the user selects Post. Do the upload of contentText and/or NSExtensionContext attachments.
+    // 1
+    guard let items = extensionContext?.inputItems as? [NSExtensionItem] else {
+        return
+    }
+    // 2
+    for item in items {
+        for attachment in item.attachments ?? [] {
+            // 3
+            if attachment.hasItemConformingToTypeIdentifier(kUTTypeURL as String) {
+                // 4
+                attachment.loadItem(forTypeIdentifier: kUTTypeURL as String, options: nil) { (item, error) in
+                                                                                            if error == nil {
+                                                                                                print("found an url: \(item)")
+                                                                                            }
+                                                                                           }
             }
         }
-        
-        // Inform the host that we're done, so it un-blocks its UI. Note: Alternatively you could call super's -didSelectPost, which will similarly complete the extension context.
-        self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
     }
+
+    // Inform the host that we're done, so it un-blocks its UI. Note: Alternatively you could call super's -didSelectPost, which will similarly complete the extension context.
+    self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
+}
 ```
 
 1. `inputItems` 是一个 `[Any]` 类型的数组，所以在使用之前需要转换一下

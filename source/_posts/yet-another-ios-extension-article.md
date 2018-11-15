@@ -148,6 +148,14 @@ override func didSelectPost() {
 本文介绍了什么是应用扩展，并介绍了一个简单的分享扩展是怎么实现的。文章大体是来源于官方的文档，虽然文档已经被苹果归档了，但是文中的代码都是我写完用模拟器验证后得来的（2018年11月14日），大家可以直接拿走按需服用 :)
 
 > 没想到只是介绍了一些基础就写了这么多。其实我还打算讲讲分享之后怎么跟载体应用交互，还想要看看今日小组件（Today Widget）怎么整...只好放到后面的文章里去了。  我发誓在这周之内把这两部分内容都给补上来！
+>
+>
+>
+> 你们看，我写完了：
+>
+> * {% post_link yet-another-ios-extension-article-2 又一篇 iOS Extension 入门（2/3）— 与容器沟通 %}
+>
+> * {% post_link yet-another-ios-extension-article-3 又一篇 iOS Extension 入门（3/3）— Today 小组件 %}
 
 ## 参考文章
 * [App Extension Programming Guide: App Extensions Increase Your Impact](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW1)

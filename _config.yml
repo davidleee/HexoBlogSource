@@ -69,7 +69,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
 - type: git
-  repo: https://git.coding.net/lee72/lee72.git
+  repo: https://git.dev.tencent.com/lee72/lee72.git
   branch: master
 - type: git
   repo: https://github.com/davidleee/davidleee.github.io.git

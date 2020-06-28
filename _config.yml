@@ -121,3 +121,14 @@ links:
   小熊糖否: http://www.freehacker.cn
   Debbie Fu: https://debbiefu.github.io/
   Hays' Blog: https://hays.github.io/
+
+# hexo-plugin-gitalk
+plugins:
+  gitalk:
+    clientID: 8225264e14e677544541
+    clientSecret: ed2a2c6d5043e9f0b41cae78b0d5b4571099de53
+    repo: HexoBlogSource
+    owner: davidleee
+    admin: 
+      - davidleee
+    distractionFreeMode: false

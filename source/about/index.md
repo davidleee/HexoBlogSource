@@ -4,9 +4,16 @@ date: 2016-04-22 15:34:17
 type: about
 comments: true
 ---
-<h1><p class="text-center">Lee</p></h1>
-<p class="text-center">iOS 程序员一枚，还兼职做做 Android 开发</p>
-<p class="text-center">如有联系的需要，可以在这个页面下评论我，我会不定期回复你~</p>
-<p class="text-center">感谢你的到来，希望这个博客对你有帮助</p>
 
 ![avatar_small](/avatar_small.jpg)
+
+## Hi！我是 Lee
+
+我是坐标广州的一名还没独立的独立开发者，目前正在开发一系列生活类的移动端应用
+
+下面是我开发的已经上架（或准备上架）的 App，如果觉得这些软件对自己的日常生活有帮助，欢迎到 App Store 上给我留下评价～
+
+> 这里应该有个列表
+
+如有联系的需要，可以在这个页面下评论我，我会不定期回复。
+感谢你的到来，希望这个博客对你有帮助～

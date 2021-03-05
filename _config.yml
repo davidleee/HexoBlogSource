@@ -71,9 +71,9 @@ deploy:
 - type: git
   repo: https://github.com/davidleee/davidleee.github.io.git
   branch: master
-# - type: git
-#   repo: https://git.dev.tencent.com/lee72/lee72.git
-#   branch: master
+- type: git
+  repo: https://e.coding.net/lee72/lee72.git
+  branch: master
 
 # Plugins
 # duoshuo_shortname: davidleee

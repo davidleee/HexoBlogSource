@@ -599,11 +599,6 @@
   "resolved" "https://registry.npmjs.org/hexo-pagination/-/hexo-pagination-1.0.0.tgz"
   "version" "1.0.0"
 
-"hexo-plugin-gitalk@^0.2.0":
-  "integrity" "sha1-pFvp7vC4+NmUUk5HQR2Q5A6huNI="
-  "resolved" "https://registry.npm.taobao.org/hexo-plugin-gitalk/download/hexo-plugin-gitalk-0.2.0.tgz"
-  "version" "0.2.0"
-
 "hexo-renderer-ejs@^2.0.0":
   "integrity" "sha512-qCjE1IdwgDgv65qyb0KMVCwCdSVAkH0vwAe9XihjvaKWkmb9dtt8DgErOdqCXn0HReSyWiEVP2BrLRj3gyHwOQ=="
   "resolved" "https://registry.npmjs.org/hexo-renderer-ejs/-/hexo-renderer-ejs-2.0.0.tgz"
@@ -654,11 +649,6 @@
     "htmlparser2" "^6.0.0"
     "prismjs" "^1.17.1"
     "strip-indent" "^3.0.0"
-
-"hexo-wordcount@^6.0.0":
-  "integrity" "sha512-tbo2P9xRWEKQmRf7+XuPjx9It1MnaE26nA+EEb2DN39gK1x+26W7Nm4Iyp4AugQjBWYYDx7OLn4gp1WFxQpQew=="
-  "resolved" "https://registry.npmjs.org/hexo-wordcount/-/hexo-wordcount-6.0.1.tgz"
-  "version" "6.0.1"
 
 "hexo@^5.0.0":
   "integrity" "sha512-4vMDle5GjpMeOVrx0NKoTZCqrmpJVg3wNiNNUVjcoFfcpYcMzQUCZHBtQqLl7BzjJ8x2gs002VQ5yv0ZKtj8Jg=="

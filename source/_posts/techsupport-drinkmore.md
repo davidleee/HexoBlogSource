@@ -1,18 +1,19 @@
 ---
-title: 好好喝水技术支持
+title: 「好好喝水」 - 喝水也可以很有成就感
 date: 2021-03-05 13:52:42
 tags:
 - 技术支持
 - 好好喝水
 comments: true
+top: 2
 ---
 
 ![](/uploads/techsupport-drinkmore/drinkmore-presentation.png)
 
-{% btn https://apps.apple.com/cn/app/%E5%A5%BD%E5%A5%BD%E5%96%9D%E6%B0%B4-%E9%9A%8F%E6%97%B6%E6%8E%8C%E6%8F%A1%E8%87%AA%E5%B7%B1%E7%9A%84%E5%96%9D%E6%B0%B4%E7%8A%B6%E5%86%B5/id1549095897, Download on the App Store, fab fa-apple fa-lg fa-fw %}
-
+{% btn https://itunes.apple.com/app/id1549095897, Download on the App Store, fab fa-apple fa-lg fa-fw %}
 
 <!-- more -->
+<p></p>
 
 - 你有没有听到“多喝水”的嘱咐却不知道怎么才算“多”的时候？
 - 你会不会感觉一天下来已经喝很多水了，临睡觉又觉得口渴了？

@@ -1,10 +1,10 @@
 ---
-title: Swift 中的幽灵类型
+title: Swift 中的幽灵类型（Phantom Types）
 date: 2022-04-20 10:22:36
 tags:
 - Swift
 - 类型
-- type system
+- Type System
 - Translation
 ---
 
@@ -103,7 +103,7 @@ func openTextEditor(for document: TextDocument) {
 
 然而，这种做法也降低了我们的代码复用程度，因为我们现在是用协议来表示文件的，所以与文件相关的所有方法都需要我们在每一个具体的类型里写一遍。这甚至会波及我们未来可能支持的更多文件类型。
 
-## 引入幽灵类型
+## 引入幽灵类型（Phantom Types）
 如果能找到一种方法能在编译时进行类型检查，同时还能保障我们的代码复用，那就太棒了。其实我们前面写过的其中一行代码里就给了我们提示：
 ```swift
 let text = String(decoding: document.data, as: UTF8.self)
